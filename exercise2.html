@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab4 – Exercise 1</title>
+</head>
+<body>
+<h1>JavaScript Lab</h1>
+    <script>
+// Declaring Functions 
+        function add(a,b) {
+            return a+b;
+        }
+        function subtract(a,b) {
+            return a-b;
+        }
+
+// Using Default Parameter
+        function add(a,b = 2) {
+            return a+b;
+        }
+        function subtract(a,b = 2) {
+            return a-b;
+        }
+
+// Implementing Arrow Functions
+        const add = (a,b = 2) => a + b;
+        const subtract = (a, b = 2) => a - b;
+        const multiply = (a, b) => a * b;
+        const divide = (a, b) => (b !== 0 ? a / b : "Error: Division by zero");
+
+// Understanding Callback Function
+        function calculator(a,b, callback) {
+            return callback(a,b);
+        }
+
+//testing
+        console.log(calculator(5, 3, add));       // Output: 8
+        console.log(calculator(10, 4, subtract)); // Output: 6
+        console.log(calculator(6, 7, multiply));  // Output: 42
+        console.log(calculator(8, 2, divide));    // Output: 4
+        console.log(calculator(9, 0, divide));    // Output: Error: Division by zero
+
+    </script>
+</body>
+</html>
